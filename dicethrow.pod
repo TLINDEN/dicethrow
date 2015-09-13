@@ -1,0 +1,47 @@
+=head1 NAME
+
+dicethrow - Generate random numbers seeded with dice throws
+
+=head1 SYNOPSIS
+
+    Usage: dice [-tcfvhd]
+    Options:
+    -t --humantoss            Asks interactively for rolled dices
+    -c --count <count>        Number of numbers (default: 4)
+    -f --randfile <randfile>  Random source to use (default:
+                              /dev/urandom)
+    -l --minlen <count>       Minimum number (default: 1)
+    -m --maxlen <count>       Maximum number (default: 256)
+    -d --debug                Enable debug output
+    -v --version              Print program version
+    -h -? --help              Print this help screen
+
+=head1 DESCRIPTION
+
+dicethrow generates B<-c> random numbers within
+a the range B<-l> to B<-m> seeded by dice throws. By default it uses
+pseudo random dice tosses, but it is also possible to use
+real dices and enter the numbers by using the option B<-t>,
+which is the most random way to generate random numbers.
+
+You can tell dicethrow to use another random source file with
+the option B<-f>. The default is /dev/random. The file should
+be a stream of random bytes.
+
+=head1 BUGS
+
+In order to report a bug, unexpected behavior, feature requests
+or to submit a patch, please open an issue on github:
+L<https://github.com/TLINDEN/dicethrow/issues>.
+
+=head1 LICENSE
+
+This software is licensed under the GNU GENERAL PUBLIC LICENSE version 3.
+
+Copyright (c) 2015 by T. v. Dein.
+
+=head1 AUTHORS
+
+T.v.Dein B<tom AT vondein DOT org>
+
+=cut
